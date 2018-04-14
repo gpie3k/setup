@@ -1,3 +1,8 @@
 #!/bin/bash
 
-sudo apt-get install terminator vim mc curl gnome-shell git ubuntu-gnome-desktop flashplugin-installer
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
+
+apt-get install terminator vim mc curl gnome-shell git ubuntu-gnome-desktop flashplugin-installer
