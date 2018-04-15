@@ -5,4 +5,8 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
+apt-update
+
+apt-upgrade
+
 apt-get install terminator vim mc curl gnome-shell git ubuntu-gnome-desktop flashplugin-installer nautilus-dropbox
